@@ -5,7 +5,7 @@
 
 ```lua
 use({
-  "aurum77/live-server.nvim"
+  "aurum77/live-server.nvim",
 		run = function()
       require"live_server.util".install()
 		end,
@@ -13,8 +13,6 @@ use({
 		cmd = { "LiveServer" },
 	})
 ```
-should work
-
 # What ?
 This plugin installs live-server to
 ```lua
