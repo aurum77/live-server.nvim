@@ -1,17 +1,17 @@
 if vim.g.loaded_live_server == 1 then
-	return
+  return
 end
 
 vim.g.loaded_live_server = 1
 
 vim.api.nvim_create_user_command("LiveServer", function()
-	require("live_server.init").toggle()
+  require("live_server.init").toggle()
 end, {})
 
 vim.api.nvim_create_user_command("LiveServerStart", function()
-	require("live_server.init").start()
+  require("live_server.init").start()
 end, {})
 
 vim.api.nvim_create_user_command("LiveServerStop", function()
-	require("live_server.init").stop()
+  require("live_server.init").stop()
 end, {})
