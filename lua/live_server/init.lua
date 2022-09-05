@@ -3,7 +3,7 @@ local LIVE_SERVER_PATH = vim.fn.stdpath("data") .. "/live-server/"
 
 M.start = function()
 	print("Started live-server!")
-	SERVER_JOB = vim.fn.jobstart({ "npm", "x", "live-server", "--prefix", LIVE_SERVER_PATH})
+	SERVER_JOB = vim.fn.jobstart({ "npm", "x", "live-server", "--prefix", LIVE_SERVER_PATH })
 end
 
 M.stop = function()
@@ -15,6 +15,13 @@ M.stop = function()
 		SERVER_JOB = nil
 	end
 end
+
+M.toggle = function()
+	if SERVER_JOB == nil then
+		M.start()
+	else
+		M.stop()
+	end
 end
 
 return M
