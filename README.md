@@ -13,12 +13,17 @@ use({
     cmd = { "LiveServer","LiveServerStart","LiveServerStop" },
   })
 ```
+# Usage
+Runs when you call `:LiveServer`, in some ways this works similarly to [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
+
+# Requirements
+- npm
+
 # What ?
 This plugin installs live-server to
 ```lua
 :lua print(vim.fn.stdpath("data") .. "/live-server/")
 ``` 
-and runs at your demand when you call `:LiveServerStart`, in some ways this works similarly to [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
 
 # ~~When ?~~ How long did it take you to write this ?
 It took about a day since I am quite new to Lua and Neovim programming / API
