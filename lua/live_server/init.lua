@@ -7,8 +7,14 @@ M.start = function()
 end
 
 M.stop = function()
-	print("Stopped live-server!")
-	vim.fn.jobstop(SERVER_JOB)
+	if SERVER_JOB == nil then
+		print("live-server not running!")
+	else
+		print("Stopped live-server!")
+		vim.fn.jobstop(SERVER_JOB)
+		SERVER_JOB = nil
+	end
+end
 end
 
 return M
