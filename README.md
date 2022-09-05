@@ -33,3 +33,10 @@ I was bored of Javascript and wanted to learn about creating plugins for Neovim 
 
 # Also
 ~~I like cats :cat:~~ Feel free to open a pull request or give recommendations to au#4829 on Discord
+
+# Thanks
+[Neovim Lua Plugin From Scratch](https://www.youtube.com/watch?v=n4Lp4cV8YR0)
+
+[How to Write a Neovim Plugin with Lua](https://www.linode.com/docs/guides/writing-a-neovim-plugin-with-lua/)
+
+[Neovim documentation](https://neovim.io/doc/)
