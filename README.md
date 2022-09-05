@@ -6,12 +6,12 @@
 ```lua
 use({
   "aurum77/live-server.nvim",
-		run = function()
+    run = function()
       require"live_server.util".install()
-		end,
-		ft = { "html" },
-		cmd = { "LiveServer" },
-	})
+    end,
+    ft = { "html" },
+    cmd = { "LiveServer","LiveServerStart","LiveServerStop" },
+  })
 ```
 # What ?
 This plugin installs live-server to
