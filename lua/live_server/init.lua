@@ -1,9 +1,21 @@
 local M = {}
-local LIVE_SERVER_PATH = vim.fn.stdpath "data" .. "/live-server/"
+
+local _LIVE_SERVER_PATH = vim.fn.stdpath "data" .. "/live-server/"
+local config = require "live_server.config"
+
+M.setup = function(user_config)
+  if config.validate_config(user_config) then
+    _LIVE_SERVER_PARAMS = config.parameterize_config(user_config)
+  else
+    _LIVE_SERVER_PARAMS = config.parameterize_config(config.default_config)
+  end
+end
 
 M.start = function()
   print "Started live-server!"
-  SERVER_JOB = vim.fn.jobstart { "npm", "x", "live-server", "--prefix", LIVE_SERVER_PATH }
+
+  _LIVE_SERVER_COMMAND = { "npm", "x", "--prefix", _LIVE_SERVER_PATH, "live-server", "--", _LIVE_SERVER_PARAMS }
+  SERVER_JOB = vim.fn.jobstart(vim.tbl_flatten(_LIVE_SERVER_COMMAND))
 end
 
 M.stop = function()
