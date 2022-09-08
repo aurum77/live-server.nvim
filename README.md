@@ -17,7 +17,7 @@ use({
 
 # Usage
 
-Runs when you call `:LiveServer`, in some ways this works similarly to [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
+Runs when you call `:LiveServer`
 
 # Requirements
 
