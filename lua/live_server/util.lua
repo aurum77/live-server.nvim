@@ -1,4 +1,5 @@
 local M = {}
+
 local LIVE_SERVER_PATH = vim.fn.stdpath "data" .. "/live-server/"
 local loop = vim.loop
 
