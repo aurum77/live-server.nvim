@@ -5,11 +5,7 @@ M.default_config = {
   browser_command = "",
 }
 
-M.validate_config = function(user_config)
-  if user_config then
-    return true
-  end
-
+M.validate = function(user_config)
   if type(user_config) ~= "table" then
     return false
   end
