@@ -10,7 +10,6 @@ use({
     run = function()
       require"live_server.util".install()
     end,
-    ft = { "html" },
     cmd = { "LiveServer","LiveServerStart","LiveServerStop" },
   })
 ```
