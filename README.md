@@ -19,7 +19,9 @@ use({
 Runs when you call `:LiveServer`
 
 # Configuration
+
 Default:
+
 ```lua
 local status_ok, live_server = pcall(require, "live_server")
 if not status_ok then
@@ -28,11 +30,12 @@ end
 
 live_server.setup({
   port = 8080,
-  browser_command = "", -- Empty string starts up with default browser  
+  browser_command = "", -- Empty string starts up with default browser
 })
 ```
 
 Example:
+
 ```lua
 local status_ok, live_server = pcall(require, "live_server")
 if not status_ok then
@@ -68,6 +71,7 @@ I was bored of Javascript and wanted to learn about creating plugins for Neovim 
 # Goal(s)
 
 - 1-1 feature parity with VSCode's [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension
+
 # Also
 
 ~~I like cats :cat:~~ Feel free to open a pull request or give recommendations to au#4829 on Discord
