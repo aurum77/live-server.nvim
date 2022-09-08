@@ -4,10 +4,10 @@ local _LIVE_SERVER_PATH = vim.fn.stdpath "data" .. "/live-server/"
 local config = require "live_server.config"
 
 M.setup = function(user_config)
-  if config.validate_config(user_config) then
-    _LIVE_SERVER_PARAMS = config.parameterize_config(user_config)
+  if config.validate(user_config) then
+    _LIVE_SERVER_PARAMS = config.parameterize(user_config)
   else
-    _LIVE_SERVER_PARAMS = config.parameterize_config(config.default_config)
+    _LIVE_SERVER_PARAMS = config.parameterize(config.default_config)
   end
 end
 

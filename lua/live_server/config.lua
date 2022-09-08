@@ -25,7 +25,7 @@ M.validate = function(user_config)
   return true
 end
 
-M.parameterize_config = function(user_config)
+M.parameterize = function(user_config)
   local port
   local browser_command
 
