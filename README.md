@@ -60,12 +60,15 @@ This plugin installs live-server to
 
 # ~~When ?~~ How long did it take you to write this ?
 
-It took about a day since I am quite new to Lua and Neovim programming / API
+The initial implementation took about a day since I am quite new to Lua and Neovim programming / API
 
 # Why ?
 
 I was bored of Javascript and wanted to learn about creating plugins for Neovim using Lua, also I wasn't able to find plugins that would work similarly to this one!
 
+# Goal(s)
+
+- 1-1 feature parity with VSCode's [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension
 # Also
 
 ~~I like cats :cat:~~ Feel free to open a pull request or give recommendations to au#4829 on Discord
