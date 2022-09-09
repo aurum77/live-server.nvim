@@ -26,20 +26,8 @@ M.validate = function(user_config)
 end
 
 M.parameterize = function(user_config)
-  local port
-  local browser_command
-
-  if not user_config.port then
-    port = M.default_config.port
-  else
-    port = user_config.port
-  end
-
-  if not user_config.browser_command then
-    browser_command = M.default_config.browser_command
-  else
-    browser_command = user_config.browser_command
-  end
+  local port = user_config.port or M.default_config.port
+  local browser_command = user_config.browser_command or M.default_config.browser_command
 
   local params = {
     "--port=" .. port,
