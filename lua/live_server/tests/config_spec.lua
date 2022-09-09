@@ -17,12 +17,12 @@ describe("config", function()
       local config = require "live_server.config"
 
       local user_config = {
-        port = 7567,
+        browser_command = "chromium",
       }
 
       local params = config.parameterize(user_config)
 
-      assert.are.same(params, { "--port=7567", "--browser=" })
+      assert.are.same(params, { "--port=8080", "--browser=chromium" })
     end)
   end)
 
