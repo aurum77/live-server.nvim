@@ -6,11 +6,12 @@ describe("config", function()
       local user_config = {
         port = 7567,
         browser_command = "firefox",
+        quiet = true,
       }
 
       local params = config.parameterize(user_config)
 
-      assert.are.same(params, { "--port=7567", "--browser=firefox" })
+      assert.are.same(params, { "--port=7567", "--browser=firefox", "--quiet" })
     end)
 
     it("can parameterize partial configuration", function()
@@ -22,7 +23,7 @@ describe("config", function()
 
       local params = config.parameterize(user_config)
 
-      assert.are.same(params, { "--port=8080", "--browser=chromium" })
+      assert.are.same(params, { "--port=8080", "--browser=chromium", "" })
     end)
   end)
 
@@ -33,6 +34,7 @@ describe("config", function()
       local user_config = {
         port = 7567,
         browser_command = "firefox",
+        quiet = true,
       }
 
       assert.is_true(config.validate(user_config))

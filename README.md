@@ -31,6 +31,7 @@ end
 live_server.setup({
   port = 8080,
   browser_command = "", -- Empty string starts up with default browser
+  quiet = false,
 })
 ```
 
