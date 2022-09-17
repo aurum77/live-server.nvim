@@ -10,16 +10,12 @@ M.validate = function(user_config)
     return false
   end
 
-  if user_config.port then
-    if type(user_config.port) ~= "number" then
-      return false
-    end
+  if type(user_config.port) ~= "number" then
+    return false
   end
 
-  if user_config.browser_command then
-    if type(user_config.browser_command) ~= "string" then
-      return false
-    end
+  if type(user_config.browser_command) ~= "string" then
+    return false
   end
 
   return true
