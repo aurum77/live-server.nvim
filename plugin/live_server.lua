@@ -15,3 +15,7 @@ end, {})
 vim.api.nvim_create_user_command("LiveServerStop", function()
   require("live_server.init").stop()
 end, {})
+
+vim.api.nvim_create_user_command("LiveServerInstall", function()
+  require("live_server.util").install()
+end, {})
