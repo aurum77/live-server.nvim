@@ -5,6 +5,7 @@ M.default_config = {
   browser_command = "",
   quiet = false,
   no_css_inject = false,
+  install_path = vim.fn.stdpath "data" .. "/live-server/",
 }
 
 M.validate = function(user_config)
@@ -25,6 +26,10 @@ M.validate = function(user_config)
   end
 
   if type(user_config.no_css_inject) ~= "boolean" then
+    return false
+  end
+
+  if type(user_config.install_path) ~= "string" then
     return false
   end
 

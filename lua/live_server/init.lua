@@ -1,7 +1,7 @@
 local M = {}
 
-local _LIVE_SERVER_PATH = vim.fn.stdpath "data" .. "/live-server/"
 local config = require "live_server.config"
+local _LIVE_SERVER_PATH = config.default_config.install_path
 
 M.setup = function(user_config)
   if config.validate(user_config) then
@@ -9,6 +9,7 @@ M.setup = function(user_config)
   else
     _LIVE_SERVER_PARAMS = config.parameterize(config.default_config)
   end
+  config.default_config.install_path = user_config.install_path or config.default_config.install_path
 end
 
 M.start = function()
